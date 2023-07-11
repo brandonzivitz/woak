@@ -1,0 +1,382 @@
+/* app.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #f7f4ef;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 999;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons > * {
+  margin-left: 10px; 
+}
+
+.nav-button,
+.social-button {
+  display: inline-block;
+  padding: 8px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button {
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.nav-button:hover {
+  background-color: #888;
+}
+
+.social-button {
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.social-button:hover {
+  background-color: #888;
+}
+
+.scroll-arrow {
+  position: absolute;
+  z-index: 5;
+  bottom: 40px;
+  left: 48.3%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 36px;
+  transition: opacity 0.3s ease;
+  animation: arrowUpDown 1.5s infinite;
+}
+
+@keyframes arrowUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.scroll-arrow.animate {
+  animation: arrowUpDown 1.5s infinite;
+}
+
+.scroll-arrow:hover {
+  opacity: 0.7;
+}
+
+.hero {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-overlay .logo-overlay img {
+  width: 1000px; /* Adjust size as needed */
+  height: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.awards-banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity as needed */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.award2021 img {
+	display: flex;
+	height: 75px;
+	width: auto;
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	align-items: center;
+}
+
+.award2022 img {
+	display: flex;
+	height: 80px;
+	width: auto;
+	position: absolute;
+	left: 100px;
+	top: 0px;
+	align-items: center;
+}
+
+#team {
+  padding: 20px;
+}
+
+#team h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#team hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.team-members {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+  width: max-content;
+  animation: scroll 100s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 1800px));
+  }
+}
+
+.team-member {
+  flex-shrink: 0;
+  width: 400px;
+  height: 550px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #f7f4ef;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  animation: scroll 100s linear infinite; 
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-member .job-title {
+  font-size: 20px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.team-member .description {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.phone-numbers {
+  position: absolute;
+  bottom: 20px; /* Adjust the bottom value as needed */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-number {
+  margin: 0 5px; /* Adjust the margin as needed */
+}
+
+#reviews {
+  padding: 10px;
+}
+
+#reviews h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#facebook-reviews-container {
+  display: flex;
+  overflow-x: auto;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+#facebook-reviews-container .fb-review {
+  margin-right: 10px; /* Adjust spacing between reviews */
+}
+
+#reviews hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+#contact {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image img {
+  width: 100%; !important
+  height: 100%; !important
+  object-fit: cover; !important
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.overlay h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#contact h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#contact p {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact p2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#contact p3 {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0px;
+}
+
+.hours {
+	margin-top: 10px;
+}
+
+#contact a {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+	margin: 10px;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 10px;
+  z-index: 999;
+}
+
+.legal-info {
+  width: 700px;
+  color: grey;
+  font-size: 14px;
+}
+
+.promo {
+	width: 400px;
+	color: black;
+	font-size: 16px;
+	margin-right: 20px;
+}
